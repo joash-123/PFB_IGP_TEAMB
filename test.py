@@ -1,8 +1,6 @@
 print("hello world")
 print("hello world again")
 
-print("test again")
-
 from pathlib import Path
 import csv
 import requests
