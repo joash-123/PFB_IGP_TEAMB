@@ -16,3 +16,19 @@ response = requests.get(url)
 print(response)
 data = response.json() 
 print(data)
+
+url = 'https://www.alphavantage.co/query?function=FX_WEEKLY&from_symbol=USD&to_symbol=SGD&apikey={api_key}'
+r = requests.get(url)
+data = r.json()
+print(data)
+
+
+fp = Path.cwd()/".csv"
+fp.touch()
+with fp.open(mode = "w", encoding="UTF-8", newline="") as file:
+    writer =  csv.writer(file)
+    # write header
+    writer.writerow(["Year", "Inflation Rate"])
+    # iterate over data to write data in csv file
+    for data in inflation["data"]:
+        writer.writerow([data["date"], data["value"]])
