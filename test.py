@@ -16,3 +16,5 @@ url = 'https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_cu
 
 response = requests.get(url)
 print(response)
+data = response.json() 
+print(data)
