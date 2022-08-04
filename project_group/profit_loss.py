@@ -2,7 +2,7 @@ from csv_reader import get_data
 
 def get_profit_loss(forex):
     # Read csv
-    data = get_data("./csv_reports/Profit and Loss.csv")
+    data = get_data("./csv_reports/Profit-and-loss.csv")
 
     f = open("summary_report.txt", "a")
 
